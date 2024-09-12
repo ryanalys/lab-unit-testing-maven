@@ -16,7 +16,10 @@ public class SampleMethods {
    * @return The temperature in Fahrenheit.
    */
   public static int c2f(int temp) {
-    return (temp - 32) * (5 / 9);
+    double output = (double)temp * (9.0/5.0);
+    output += 32;
+    int ioutput = (int)output;
+    return ioutput;
   } // c2f(int)
 
   /**
@@ -85,7 +88,7 @@ public class SampleMethods {
 
     for (int i = 0; i < str.length(); i++) {
       if (str.charAt(i) == 'a') {
-        noAs += str.charAt(i++);
+        noAs += str.charAt(i);
       } // if we see the a
     } // for each position
 
@@ -127,7 +130,7 @@ public class SampleMethods {
     int result = 0;
 
     for (int i = 0; i < ints.length; i++) {
-      result += result + i;
+      result += ints[i];
     } // for
 
     return result; } // result(int[])
